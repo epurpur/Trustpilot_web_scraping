@@ -8,55 +8,14 @@ from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 
-# establish Google Chrome webdriver
-# webdriver_path = "./chromedriver"
-# driver = webdriver.Chrome(executable_path=webdriver_path)
+import urls as url_list
 
-urls = [ 
-        "https://www.trustpilot.com/review/www.misfitsmarket.com", 
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=2",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=3",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=4",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=5",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=6",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=7",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=8",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=9",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=10",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=11",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=12",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=13",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=14",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=15",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=16",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=17",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=18",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=19",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=20",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=21",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=22",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=23",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=24",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=25",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=26",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=27",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=28",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=29",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=30",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=31",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=32",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=33",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=34",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=35",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=36",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=37",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=38",
-        "https://www.trustpilot.com/review/www.misfitsmarket.com?page=39",
-        
-        ]
+#### Question:  Should I automate this with Selenium??
 
-# Get page via url
-# driver.get(url)
+##### CHANGE THIS ACCORDING TO THE COMPANY YOU WANT DATA FROM. View options in urls.py file
+urls = url_list.lidl_uk()
+
+
 
 final_reviewer_names = []
 final_star_ratings = []
@@ -157,19 +116,15 @@ for url in urls:
         
     
 # put it all together in a pandas dataframe
-# reviews_df = pd.DataFrame({
-#     "Name": final_reviewer_names,
-#     "Star Rating": final_star_ratings,
-#     "Review Title": final_review_titles,
-#     "Review Content": final_review_contents,
-#     "Date": final_dates
-#     })
-
-#convert 'Date' column to pandas datetime object
-# reviews_df['Date'] = pd.to_datetime(reviews_df['Date']).dt.date
+reviews_df = pd.DataFrame({
+    "Name": final_reviewer_names,
+    "Star Rating": final_star_ratings,
+    "Review Title": final_review_titles,
+    "Review Content": final_review_contents,
+    "Date": final_dates
+    })
 
 
 
 
-# kill webdriver at the end
-# driver.quit()
+
