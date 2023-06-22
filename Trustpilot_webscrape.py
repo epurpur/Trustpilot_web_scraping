@@ -153,13 +153,13 @@ final_dates.pop(163)
     
     
 # put it all together in a pandas dataframe
-# reviews_df = pd.DataFrame({
-#     "Name": final_reviewer_names,
-#     "Star Rating": final_star_ratings,
-#     "Review Title": final_review_titles,
-#     "Review Content": final_review_contents,
-#     "Date": final_dates
-#     })
+reviews_df = pd.DataFrame({
+    "Name": final_reviewer_names,
+    "Star Rating": final_star_ratings,
+    "Review Title": final_review_titles,
+    "Review Content": final_review_contents,
+    "Date": final_dates
+    })
 
 
 
