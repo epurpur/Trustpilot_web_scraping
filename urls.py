@@ -13,7 +13,6 @@ def imperfect_foods():
     for i in page_number_list:
         url_list.append(f"https://www.trustpilot.com/review/imperfectfoods.com?page={i}")
 
-        
     return url_list
 
 
@@ -57,7 +56,6 @@ def oddbox():
     for i in page_number_list:
         url_list.append(f"https://www.trustpilot.com/review/www.oddbox.co.uk?page={i}")
 
-        
     return url_list
 
 
@@ -73,7 +71,6 @@ def earth_and_wheat():
     for i in page_number_list:
         url_list.append(f"https://www.trustpilot.com/review/earthandwheat.com?page={i}")
 
-        
     return url_list
 
 
@@ -89,7 +86,6 @@ def motatos_uk():
     for i in page_number_list:
         url_list.append(f"https://www.trustpilot.com/review/motatos.co.uk?page={i}")
 
-        
     return url_list
 
     
@@ -105,7 +101,6 @@ def odd_coffee_co():
     for i in page_number_list:
         url_list.append(f"https://www.trustpilot.com/review/oddcoffeeco.com?page={i}")
 
-        
     return url_list
 
 
@@ -128,7 +123,6 @@ def morrisons():
     for i in page_number_list:
         url_list.append(f"https://www.trustpilot.com/review/morrisons.com?page={i}")
 
-        
     return url_list
 
 
@@ -140,10 +134,10 @@ def lidl_uk():
     
     #184 pages of reviews at the time of data collection
     page_number_list = [num for num in range(1,185)]
+
     
     for i in page_number_list:
         url_list.append(f"https://www.trustpilot.com/review/www.lidl.co.uk?page={i}")
-
-        
+ 
     return url_list
 
